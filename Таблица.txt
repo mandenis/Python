@@ -1,0 +1,23 @@
+                      ЗАДАНИЕ:
+Дочь учит таблицу умножения.Написал программу для выполения ДЗ.
+
+                      РЕШЕНИЕ:
+b = int(input('Введите количество заданий :'))
+gen_total = 0
+error_total = []
+attempt = 1
+while gen_total < b:
+    x = int(input('Введите первое число :'))
+    y = int(input('Введите второе число :'))
+    a = int(input('Перемножте числа :'))
+    if a == x*y:
+        print('Верно')
+        gen_total += attempt
+    while a != x*y:
+        a = int(input('Попробуйте еще раз :'))
+        error = x,y,a
+        error_total.append(error) 
+        if a == x*y:
+            print('Верно')
+            gen_total += attempt
+print('Ошибки :',error_total)
