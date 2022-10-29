@@ -14,9 +14,10 @@ while gen_total < b:
         print('Верно')
         gen_total += attempt
     while a != x*y:
-        a = int(input('Попробуйте еще раз :'))
+        
         error = x,y,a
         error_total.append(error) 
+        a = int(input('Попробуйте еще раз :'))
         if a == x*y:
             print('Верно')
             gen_total += attempt
