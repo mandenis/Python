@@ -1,0 +1,103 @@
+
+		ЗАДАНИЕ:
+			Змеиный регистр
+Напишите функцию convert_to_python_case(text), которая принимает в качестве аргумента строку в «верблюжьем регистре» 
+и преобразует его в «змеиный регистр».
+Примечание 1. Почитать подробнее о стилях именования можно тут.
+Примечание 2. Следующий программный код:
+
+print(convert_to_python_case('ThisIsCamelCased'))
+print(convert_to_python_case('IsPrimeNumber'))
+
+должен выводить:
+
+this_is_camel_cased
+is_prime_number
+
+		РЕШЕНИЕ:
+def convert_to_python_case(text):
+    sp = list()
+    for i in range(len(text)):
+        if text[i].istitle() and i != 0:
+            sp.append('_')
+            sp.append(text[i].lower())
+        else:
+            sp.append(text[i].lower())
+    print(''.join(sp))
+convert_to_python_case(input())
+
+
+		
+		ЗАДАНИЕ:
+.
+
+
+
+
+		РЕШЕНИЕ:
+
+
+		ЗАДАНИЕ:
+
+
+
+
+		РЕШЕНИЕ:
+
+
+
+
+		ЗАДАНИЕ:
+
+
+
+
+
+
+		РЕШЕНИЕ:
+
+
+
+
+
+
+
+
+		ЗАДАНИЕ:
+
+
+
+
+		РЕШЕНИЕ:
+
+
+
+
+		ЗАДАНИЕ:
+
+
+
+
+
+		РЕШЕНИЕ:
+
+
+		ЗАДАНИЕ:
+
+
+		РЕШЕНИЕ:
+
+
+
+
+		ЗАДАНИЕ:
+
+
+		РЕШЕНИЕ:
+
+
+
+		ЗАДАНИЕ:
+
+
+		РЕШЕНИЕ:
