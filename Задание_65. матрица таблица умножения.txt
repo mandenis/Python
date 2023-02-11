@@ -1,0 +1,12 @@
+# n = [[i * j for i in range(1,10)] for j in range(1, 10)]
+# for i in n:
+#     print(*i, sep=' ')
+    # через комплессор
+#
+#
+# for i in range(1, 10):
+#     n = list()
+#     for j in range(1, 10):
+#         n.append(i * j)
+#     print(*[i for i in n])
+#     # через вложенный цикл
