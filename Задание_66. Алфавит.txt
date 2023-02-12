@@ -1,0 +1,10 @@
+x, n = list(), []
+for i in range(65, 91):
+    n.append(chr(i))
+    n.append(chr(i + 32))
+    if len(n) == 12:
+        x.append(n)
+        n = list()
+x.append(n)
+for c in x:
+    print(*c, sep=' ')
