@@ -1,0 +1,75 @@
+	ЗАДАЧА
+Дополните приведенный код, чтобы в переменной result хранился словарь, в котором ключи – числа от 
+1 до 15 (включительно), а значения представляют собой квадраты ключей.
+Примечание. Выводить содержимое словаря result не нужно.
+
+
+	РЕШЕНИЕ
+# result = {}
+# for i in range(1, 15 + 1):
+#     result.setdefault(i, i ** 2)
+
+### Через генератор
+result = {i: i ** 2  for i in range(1, 15 + 1)}
+
+
+	ЗАДАЧА
+Дополните приведенный код так, чтобы он объединил содержимое двух словарей dict1 и dict2 по ключам, складывая значения по одному 
+и тому же ключу, в случае, если ключ присутствует в обоих словарях. Результирующий словарь необходимо присвоить переменной result.
+
+Примечание. Выводить содержимое словаря result не нужно.
+
+	РЕШЕНИЕ
+result = {}
+for i in dict1:
+    result[i] = result.get(i, dict1[i])
+    for j in dict2:
+        if i == j:
+            result[i] = dict1[i] + dict2[j]
+        else:
+            result[j] = result.get(j, dict2[j])
+
+
+	ЗАДАЧА
+Дополните приведенный код так, чтобы в переменной result хранился словарь, в котором для каждого символа строки text будет подсчитано 
+количество его вхождений.
+
+Примечание. Выводить содержимое словаря result не нужно.
+
+	РЕШЕНИЕ
+result = {}
+for c in text:
+    result[c] = result.setdefault(c, 0) + 1
+
+
+	ЗАДАЧА
+Дополните приведенный код, чтобы он вывел наиболее часто встречающееся слово строки s. Если таких слов несколько, должно быть выведено то,
+что меньше в лексикографическом порядке.
+
+
+	РЕШЕНИЕ
+s = 'orange strawberry barley gooseberry apple apricot barley currant orange melon pomegranate banana banana orange barley apricot 
+plum grapefruit banana quince strawberry barley grapefruit banana grapes melon strawberry apricot currant currant gooseberry raspberry 
+apricot currant orange lime quince grapefruit barley banana melon pomegranate barley banana orange barley apricot plum banana quince 
+lime grapefruit strawberry gooseberry apple barley apricot currant orange melon pomegranate banana banana orange apricot barley plum 
+banana grapefruit banana quince currant orange melon pomegranate barley plum banana quince barley lime grapefruit pomegranate barley'
+
+sp_s = [c for c in s.split()]
+d_ict = {}
+for c in sp_s:
+    d_ict[c] = d_ict.setdefault(c, sp_s.count(c))
+print(min([c for c in d_ict if d_ict[c] == max(d_ict.values())]))
+
+
+
+	ЗАДАЧА
+
+
+
+
+	РЕШЕНИЕ
+
+
+
+
+
