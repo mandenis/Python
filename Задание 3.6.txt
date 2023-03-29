@@ -1,0 +1,18 @@
+	ЗАДАЧА
+Напишите функцию check_sum, которая принимает произвольное количество аргументов типа int.
+Данная функция должна выводить not enough, если сумма всех элементов меньше 50, в противном случае выводить verification passed
+Вам необходимо написать только определение функции check_sum
+
+
+	РЕШЕНИЕ
+def check_sum(*args):
+    print('not enough' if sum([i for i in args if isinstance(i, (int))]) < 50 else 'verification passed')
+    # for i in args:
+    #     if isinstance(i, (int)):
+    #         sp.append(i)
+    # print('not enough' if sp < 50 else 'verification passed')
+
+
+
+
+
